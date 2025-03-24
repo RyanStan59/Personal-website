@@ -1,40 +1,56 @@
-/* Header layout */
-.header-container {
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF; /* Change to white or any other color */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #FFFFFF; /* Change header background */
+    color: black; /* Ensure text is visible on light backgrounds */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
     display: flex;
-    justify-content: space-between; /* Space between title and profile */
-    align-items: center; /* Align items vertically */
-    padding: 0 2rem;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem 0;
 }
 
-/* Profile section */
-.profile {
-    display: flex;
-    align-items: center; /* Align profile image and links */
-    gap: 1rem; /* Spacing between image and links */
-}
-
-/* Profile picture styling */
-.profile-pic {
-    width: 60px; /* Adjust image size */
-    height: 60px;
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensure image fits nicely */
-    border: 2px solid white; /* Optional border for styling */
-}
-
-/* Contact links styling */
-.contact-links {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-}
-
-.contact-links a {
+nav a {
     text-decoration: none;
-    color: white;
-    font-size: 0.9rem; /* Slightly smaller for subtle links */
-    transition: color 0.3s;
+    color: black; /* Ensure links are visible */
+    font-weight: bold;
 }
 
-.contact-links a:hover {
-    color: #FFD700; /* Gold hover effect */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background: #4CAF50; /* Change to a new button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049; /* Fixed double # issue */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #FFFFFF; /* Change footer background */
+    color: black;
 }
