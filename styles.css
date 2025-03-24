@@ -1,17 +1,14 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #0FA4AF;
-    color: #333;
+    background-color: #ffffff;
     line-height: 1.6;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
     background: #0FA4AF;
-    color: white;
     padding: 1rem 0;
     text-align: center;
 }
@@ -25,7 +22,6 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: white;
     font-weight: bold;
 }
 
@@ -37,7 +33,6 @@ main {
 button {
     padding: 10px 20px;
     background: #0FA4AF;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -48,17 +43,9 @@ button:hover {
     background: #0FA4AF;
 }
 
-.flex-wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
 footer {
-    margin-bottom: auto;
+    min-height: 50px;
     text-align: center;
     padding: 1rem 0;
-    background: #0FA4AF;
-    color: white;
+    background: #ffffff;
 }
