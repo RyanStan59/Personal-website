@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: #0FA4AF;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -36,7 +36,7 @@ main {
 
 button {
     padding: 10px 20px;
-    background: #4CAF50;
+    background: ##0FA4AF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,12 +45,12 @@ button {
 }
 
 button:hover {
-    background: #45a049;
+    background: ##0FA4AF;
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #4CAF50;
+    background: ##0FA4AF;
     color: white;
 }
