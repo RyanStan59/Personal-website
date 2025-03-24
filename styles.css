@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFFFFF; /* Change to white or any other color */
+    background-color: #0FA4AF; /* Change to white or any other color */
     color: #333;
     line-height: 1.6;
 }
@@ -36,7 +36,7 @@ main {
 
 button {
     padding: 10px 20px;
-    background: #4CAF50; /* Change to a new button color */
+    background: #FFFFFF; /* Change to a new button color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,7 +45,7 @@ button {
 }
 
 button:hover {
-    background: #45a049; /* Fixed double # issue */
+    background: #0FA4AF; /* Fixed double # issue */
 }
 
 footer {
