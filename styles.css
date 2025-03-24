@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0FA4AF; /* Change to white or any other color */
+    background-color: #0FA4AF;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background: #FFFFFF; /* Change header background */
-    color: black; /* Ensure text is visible on light backgrounds */
+    background: #0FA4AF;
+    color: white;
     padding: 1rem 0;
     text-align: center;
 }
@@ -25,7 +25,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black; /* Ensure links are visible */
+    color: white;
     font-weight: bold;
 }
 
@@ -36,7 +36,7 @@ main {
 
 button {
     padding: 10px 20px;
-    background: #FFFFFF; /* Change to a new button color */
+    background: #0FA4AF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,12 +45,12 @@ button {
 }
 
 button:hover {
-    background: #0FA4AF; /* Fixed double # issue */
+    background: #0FA4AF;
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #FFFFFF; /* Change footer background */
-    color: black;
+    background: #0FA4AF;
+    color: white;
 }
