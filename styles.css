@@ -48,7 +48,15 @@ button:hover {
     background: #0FA4AF;
 }
 
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
 footer {
+    margin-bottom: auto;
     text-align: center;
     padding: 1rem 0;
     background: #0FA4AF;
