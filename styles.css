@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: #0FA4AF;
     color: #333;
     line-height: 1.6;
 }
@@ -36,7 +36,7 @@ main {
 
 button {
     padding: 10px 20px;
-    background: ##0FA4AF;
+    background: #0FA4AF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -51,6 +51,6 @@ button:hover {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: ##0FA4AF;
+    background: #0FA4AF;
     color: white;
 }
