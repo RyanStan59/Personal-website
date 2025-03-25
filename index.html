@@ -3,33 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan's Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to my personal website Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+<div class="left">
+    <a href="/">Ryan Stanisci</a>
+</div>
+
+<div class="right">
+    <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+    </a>
+   
+    <a href="http://Linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+    </a>
+
+    <a href="mailto:ryanstanisci@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+    </a>
+</div>
+    </nav>
 
     <main>
-        <h2>Hello, World!</h2>
-        <p>This is a simple website template using HTML, CSS, and JavaScript.</p>
-        <button id="alertButton">Click Me</button>
-    </main>
+        <section class="personalinfo">
+            <div class="text">
+                <h2>Hi, Im Ryan</h2>
+            </div>
+            <div class="picture">
+                <img src="images/IMG_0881.webp" alt="Ryans headshot">
+            </div>
+            <div class="paragraph">
+                <p>I am a computer science major at Montclair State University. I am currently a senior and currently looking for a summer internship this year to advance my career and develope real skills in a work environment.
+                </p>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 My Website. All rights reserved.</p>
-    </footer>
-    
+        <section id="skills"></section>
+            <h2>Skills</h2>
+            <div class="text">
+                
+            </div>
+        <section id="Projects"></section>
+
+        <section id="Info"></section>
+    </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>
