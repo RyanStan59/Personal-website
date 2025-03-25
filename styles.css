@@ -81,3 +81,39 @@ a {
     margin: 75px 0;
 }
 
+/* Skills */
+
+.skills-section {
+    padding:  100px;
+    margin-bottom: 100px;
+}
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid #686767;
+    border-radius: 5px;
+}
+.skills-section .cells img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
