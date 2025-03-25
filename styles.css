@@ -1,51 +1,83 @@
 /* styles.css */
-body {
-    min-height: 100vh;
+
+:root {
+    --text-color: #383737;
+    --link-color: #4a76ee;
+    --background-color: #bebebe;
+}
+
+*{
     margin: 0;
-    background-color: #ffffff;
-    line-height: 1.6;
-    grid-template-rows: auto 1fr auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background: #752e11;
-    padding: 1rem 0;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Top Nav bar*/
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 1rem 0;
+    display: flex;  
+    justify-content: space-between;
+    background-color: rgb(91, 202, 202);
+    padding: 0 60px;
+    align-items: center;
+    height: 100px;
+}
+nav .left a {
+    color: var(--text-color);
+    font-size: 33px;
+    font-weight: 600;
 }
 
-nav a {
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+a {
     text-decoration: none;
+    color: var(--link-color);
     font-weight: bold;
 }
 
-main {
-    padding: 2rem;
-    text-align: center;
+/* Personal Information area*/
+
+.personalinfo .text {
+    justify-content: center;
+    display: flex;
+}
+.personalinfo .text h2{
+    font-size: 40px;
+}
+.personalinfo .paragraph {
+    margin: 50px 450px;
+    font-size: 22px;
+    justify-content: center;
+    display: flex;
+}
+.personalinfo .picture {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+.personalinfo .picture img {
+    width: 450px;
+    height: 500px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+}
+.personalinfo {
+    justify-content: center;
+    display: center;
+    padding: 0 50px;
+    margin: 75px 0;
 }
 
-button {
-    padding: 10px 20px;
-    background: #0FA4AF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #0FA4AF;
-}
-
-footer {
-    min-height: 50px;
-    text-align: center;
-    padding: 1rem 0;
-    background: #ffffff;
-}
