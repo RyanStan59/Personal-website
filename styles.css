@@ -3,7 +3,7 @@
 :root {
     --text-color: #383737;
     --link-color: #4a76ee;
-    --background-color: #bebebe;
+    --background-color: #ffffff;
 }
 
 *{
@@ -57,10 +57,18 @@ a {
     font-size: 40px;
 }
 .personalinfo .paragraph {
-    margin: 50px 450px;
+    margin: 30px 450px;
     font-size: 22px;
     justify-content: center;
     display: flex;
+    text-align: center;
+}
+.personalinfo .para2 {
+    margin: 20px 450px;
+    font-size: 22px;
+    justify-content: center;
+    display: center;
+    text-align: center;
 }
 .personalinfo .picture {
     justify-content: center;
@@ -109,11 +117,38 @@ a {
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1px solid #686767;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 .skills-section .cells img{
     width: 100px;
     height: 100px;
     object-fit: contain;
+}
+
+.floating-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.nav-item {
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    background: rgba(255, 255, 255, 0); /* Fully transparent */
+}
+
+.nav-item:hover {
+    background-color: #357ABD;
+}
+.nav-item:hover {
+    background-color: rgb(91, 202, 202); /* Light grey with transparency */
+    transform: scale(1.2); /* Grows by 10%, approximately 5px */
 }
