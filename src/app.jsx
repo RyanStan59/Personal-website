@@ -41,7 +41,7 @@ function App() {
             <h2>Hi, I'm Ryan</h2>
           </div>
           <div className="picture">
-            <img src="images/IMG_0881.webp" alt="Ryan's headshot" />
+            <img src="/images/IMG_0881.webp" alt="Ryan's headshot" />
           </div>
           <div className="paragraph">
             <p>
