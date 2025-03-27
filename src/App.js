@@ -12,15 +12,10 @@ function App() {
       <Navbar />  {/* Include Navbar component here */}
 
       {/* Floating Navigation */}
-      <div className="floating-nav">
-        <a href="#section3" className="nav-item">Welcome</a>
-        <a href="#skills" className="nav-item">Skills</a>
-        <a href="#section3" className="nav-item">Projects</a>
-      </div>
-
+    
       {/* Personal Info */}
       <PersonalInfo />  {/* Include PersonalInfo component here */}
-
+    
       {/* Skills Section */}
       <Skills />
 

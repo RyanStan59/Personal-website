@@ -48,81 +48,80 @@ a {
 
 /* Personal Information area*/
 
-.personalinfo .text {
-    justify-content: center;
-    display: flex;
-}
-.personalinfo .text h2{
-    font-size: 40px;
-}
-.personalinfo .paragraph {
-    margin: 30px 450px;
-    font-size: 22px;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-}
-.personalinfo .para2 {
-    margin: 20px 450px;
-    font-size: 22px;
-    justify-content: center;
-    display: center;
-    text-align: center;
-}
-.personalinfo .picture {
-    justify-content: center;
-    display: flex;
-    margin-top: 50px;
-}
-.personalinfo .picture img {
-    width: 450px;
-    height: 500px;
-    border-radius: 50%;
-    justify-content: center;
-    display: flex;
-}
 .personalinfo {
-    justify-content: center;
-    display: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 0 50px;
     margin: 75px 0;
 }
 
-/* Skills */
-
-.skills-section {
-    padding:  100px;
-    margin-bottom: 100px;
-}
-.skills-section h2 {
-    text-align: center;
-    font-size: 35px;
-}
-.skills-section .text {
-    text-align: center;
-    margin-bottom: 20px;
+.personalinfo .intro-text {
     font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the heading and the picture */
+  }
+.personalinfo .paragraph {
+    max-width: 600px; /* Keeps text from being too wide */
+    margin: 20px auto; /* Centers text */
+    font-size: 25px;
+    text-align: center;
 }
-.skills-section .cells {
+
+.personalinfo .picture {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 50px;
 }
-.skills-section .cells .cell{
+
+.personalinfo .picture img {
+    width: 300px; /* Adjusted width */
+    height: 310px; /* Keep the height proportional */
+    border-radius: 50%; /* Round the image */
+    object-fit: cover; /* Ensure image scales and is cropped properly */
+}
+
+
+/* Skills */
+
+.skills {
+    padding: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;  /* Stack the heading and images vertically */
+    align-items: center;  /* Center everything horizontally */
+}
+
+.skills h2 {
+    font-size: 35px;
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+.skills .picture {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 200px;
-    padding: 10px 20px;
     margin: 10px;
-    border-radius: 1px;
 }
-.skills-section .cells img{
+
+.skills .picture img {
     width: 100px;
     height: 100px;
     object-fit: contain;
+    border-radius: 10px;
 }
+
+/* Flexbox to arrange images side by side */
+.skills .pictures-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between images */
+}
+
+
+
 
 .floating-nav {
     position: fixed;

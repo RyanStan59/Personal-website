@@ -13,15 +13,15 @@ function Navbar() {
         <div className="right">
           <a href="https://github.com/RyanStan59" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-github"></i>
-            <span>Github</span>
+            <span> Github</span>
           </a>
           <a href="http://Linkedin.com/in/ryan-stanisci" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin"></i>
-            <span>LinkedIn</span>
+            <span> LinkedIn</span>
           </a>
           <a href="mailto:ryanstanisci@gmail.com" target="_blank" rel="noopener noreferrer">
             <i className="fa-solid fa-envelope"></i>
-            <span>Email</span>
+            <span> Email</span>
           </a>
         </div>
       </nav>
