@@ -38,6 +38,7 @@ nav .left a {
 nav .right a {
     color: var(--text-color);
     margin: 0 10px;
+    font-size: 20px;
 }
 
 a {
@@ -50,36 +51,32 @@ a {
 
 .personalinfo {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 0 50px;
-    margin: 75px 0;
+    padding: 20 50px;
+    margin: 50px 10;
+    gap: 40px;
 }
-
-.personalinfo .intro-text {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px; /* Space between the heading and the picture */
-  }
 .personalinfo .paragraph {
-    max-width: 600px; /* Keeps text from being too wide */
-    margin: 20px auto; /* Centers text */
-    font-size: 25px;
-    text-align: center;
+    margin-left: 200;
+    font-size: 30;
+}
+.personalinfo .paragraph h2{
+    font-size: 60;
 }
 
 .personalinfo .picture {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    justify-content: right;
+    margin-right: 120px;
 }
 
 .personalinfo .picture img {
-    width: 300px; /* Adjusted width */
-    height: 310px; /* Keep the height proportional */
-    border-radius: 50%; /* Round the image */
-    object-fit: cover; /* Ensure image scales and is cropped properly */
+    display: flex;
+    width: 450px; 
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 
@@ -89,13 +86,13 @@ a {
     padding: 100px;
     margin-bottom: 100px;
     display: flex;
-    flex-direction: column;  /* Stack the heading and images vertically */
-    align-items: center;  /* Center everything horizontally */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .skills h2 {
     font-size: 35px;
-    margin-bottom: 30px; /* Add space below the heading */
+    margin-bottom: 30px;
 }
 
 .skills .picture {
@@ -117,21 +114,23 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Add space between images */
+    gap: 20px; 
 }
 
 
 
-
+@media screen and (max-width: 800px) { 
+}
 .floating-nav {
     position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 2%;
+    top: 40%; 
+    transform: translateY(-25%);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 1000; /* Ensures it stays on top */
+    gap: 15px;
+
+    font-size: 20;
 }
 
 .nav-item {
@@ -140,7 +139,7 @@ a {
     text-decoration: none;
     border-radius: 8px;
     transition: background 0.3s;
-    background: rgba(255, 255, 255, 0); /* Fully transparent */
+    background: rgba(255, 255, 255, 0); 
 }
 
 .nav-item:hover {
