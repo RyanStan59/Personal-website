@@ -1,0 +1,152 @@
+/* styles.css */
+:root {
+    --text-color: #383737;
+    --link-color: #4a76ee;
+    --background-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Top Nav bar*/
+nav {
+    display: flex;  
+    justify-content: space-between;
+    background-color: rgb(91, 202, 202);
+    padding: 0 60px;
+    align-items: center;
+    height: 100px;
+}
+nav .left a {
+    color: var(--text-color);
+    font-size: 33px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+/* Personal Information area*/
+
+.personalinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+    margin: 75px 0;
+}
+
+.personalinfo .intro-text {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the heading and the picture */
+  }
+.personalinfo .paragraph {
+    max-width: 600px; /* Keeps text from being too wide */
+    margin: 20px auto; /* Centers text */
+    font-size: 25px;
+    text-align: center;
+}
+
+.personalinfo .picture {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.personalinfo .picture img {
+    width: 300px; /* Adjusted width */
+    height: 310px; /* Keep the height proportional */
+    border-radius: 50%; /* Round the image */
+    object-fit: cover; /* Ensure image scales and is cropped properly */
+}
+
+
+/* Skills */
+
+.skills {
+    padding: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;  /* Stack the heading and images vertically */
+    align-items: center;  /* Center everything horizontally */
+}
+
+.skills h2 {
+    font-size: 35px;
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+.skills .picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.skills .picture img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Flexbox to arrange images side by side */
+.skills .pictures-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between images */
+}
+
+
+
+
+.floating-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.nav-item {
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    background: rgba(255, 255, 255, 0); /* Fully transparent */
+}
+
+.nav-item:hover {
+    background-color: #357ABD;
+}
+.nav-item:hover {
+    background-color: rgb(91, 202, 202); /* Light grey with transparency */
+    transform: scale(1.2); /* Grows by 10%, approximately 5px */
+}
