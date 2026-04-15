@@ -1,18 +1,23 @@
 import React from 'react';
+import ContactForm from './ContactForm';
 
 export default function Footer() {
   return (
     <div className="container">
-      <div className="footerCard">
+      <div className="footerCard reveal">
         <div className="footerLeft">
           <h2>Let’s connect</h2>
           <p className="muted">
             I’m currently looking for a summer internship. If you think I’d be a
             good fit, I’d love to chat.
           </p>
+          <p className="muted footerHint">
+            Or send a quick message below (goes to Firebase Firestore).
+          </p>
         </div>
 
         <div className="footerRight">
+          <ContactForm />
           <div className="footerLinks">
             <a
               className="button button--primary"

@@ -1,9 +1,7 @@
 const skills = [
   { name: 'Python', img: 'python_18894.webp' },
-  { name: 'HTML', img: 'file_type_html_icon_130541.webp' },
-  { name: 'GitHub', img: 'github_original_wordmark_logo_icon_146506.webp' },
+  { name: 'Git', img: 'github_original_wordmark_logo_icon_146506.webp' },
   { name: 'Java', img: 'java_original_wordmark_logo_icon_146459.webp' },
-  { name: 'C', img: 'c_icon_132529.webp' },
   { name: 'Docker', img: 'docker_original_wordmark_logo_icon_146557.webp' },
 ];
 

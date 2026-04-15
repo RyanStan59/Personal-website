@@ -2,11 +2,11 @@ import React from 'react';
 
 const projects = [
   {
-    title: 'Project One',
+    title: 'BugOut',
     description:
-      'Short description of what it does, what you built it with, and the impact.',
-    tags: ['React', 'API', 'UI'],
-    href: 'https://github.com/RyanStan59',
+      'A featured GitHub project from my portfolio. Check out the repository to see the code, setup, and ongoing progress.',
+    tags: ['GitHub', 'Personal Project', 'Software'],
+    href: 'https://github.com/RyanStan59/BugOut',
     cta: 'View on GitHub',
   },
   {

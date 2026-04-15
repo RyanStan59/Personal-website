@@ -24,7 +24,7 @@ function PersonalInfo({ onContactClick }) {
           >
             View GitHub
           </a>
-          <button className="button button--ghost" onClick={onContactClick}>
+          <button className="button button--ghost" type="button" onClick={onContactClick}>
             Contact
           </button>
           <a

@@ -13,7 +13,6 @@ function App() {
   const contactRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState('welcome');
-  const [theme, setTheme] = useState('dark');
 
   const sections = useMemo(
     () => [
@@ -25,27 +24,11 @@ function App() {
     []
   );
 
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (ref, id) => {
+    const el = ref?.current ?? (id ? document.getElementById(id) : null);
+    if (id) window.location.hash = `#${id}`;
+    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light' || saved === 'dark') {
-      setTheme(saved);
-      return;
-    }
-
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
-  }, [theme]);
 
   useEffect(() => {
     const nodes = sections
@@ -73,6 +56,25 @@ function App() {
     return () => observer.disconnect();
   }, [sections]);
 
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll('.reveal'));
+    if (!els.length) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('isVisible');
+          obs.unobserve(e.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    els.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <div className="app">
       <Navbar
@@ -82,29 +84,34 @@ function App() {
         projectsRef={projectsRef}
         contactRef={contactRef}
         activeSection={activeSection}
-        theme={theme}
-        onToggleTheme={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
       />
 
       {/* Personal Info Section (Welcome Section) */}
       <section ref={welcomeRef} id="welcome" className="section section--hero">
-        <PersonalInfo onContactClick={() => scrollToSection(contactRef)} />
+        <div className="reveal">
+          <PersonalInfo onContactClick={() => scrollToSection(contactRef, 'contact')} />
+        </div>
       </section>
 
       {/* Skills Section */}
       <section ref={skillsRef} id="skills" className="section">
-        <Skills />
+        <div className="reveal">
+          <Skills />
+        </div>
       </section>
 
       {/* Projects Section */}
       <section ref={projectsRef} id="projects" className="section">
-        <Projects />
+        <div className="reveal">
+          <Projects />
+        </div>
       </section>
 
       {/* Info Section */}
       <section ref={contactRef} id="contact" className="section section--footer">
         <Footer />
       </section>
+
     </div>
   );
 }

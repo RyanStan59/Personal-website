@@ -1,4 +1,5 @@
 import React from 'react';
+import ConnectFab from './ConnectFab';
 
 function Navbar({
   scrollToSection,
@@ -7,21 +8,19 @@ function Navbar({
   projectsRef,
   contactRef,
   activeSection,
-  theme,
-  onToggleTheme,
 }) {
   const [open, setOpen] = React.useState(false);
 
-  const navTo = (ref) => (e) => {
+  const navTo = (ref, id) => (e) => {
     e.preventDefault();
     setOpen(false);
-    scrollToSection(ref);
+    scrollToSection(ref, id);
   };
 
   return (
     <header className="siteHeader">
       <nav className="container nav">
-        <a className="brand" href="#welcome" onClick={navTo(welcomeRef)}>
+        <a className="brand" href="#welcome" onClick={navTo(welcomeRef, 'welcome')}>
           <span className="brandDot" aria-hidden="true" />
           <span className="brandText">Ryan Stanisci</span>
         </a>
@@ -42,33 +41,35 @@ function Navbar({
           <a
             href="#welcome"
             className={`navLink ${activeSection === 'welcome' ? 'isActive' : ''}`}
-            onClick={navTo(welcomeRef)}
+            onClick={navTo(welcomeRef, 'welcome')}
           >
             Welcome
           </a>
           <a
             href="#skills"
             className={`navLink ${activeSection === 'skills' ? 'isActive' : ''}`}
-            onClick={navTo(skillsRef)}
+            onClick={navTo(skillsRef, 'skills')}
           >
             Skills
           </a>
           <a
             href="#projects"
             className={`navLink ${activeSection === 'projects' ? 'isActive' : ''}`}
-            onClick={navTo(projectsRef)}
+            onClick={navTo(projectsRef, 'projects')}
           >
             Projects
           </a>
           <a
             href="#contact"
             className={`navLink ${activeSection === 'contact' ? 'isActive' : ''}`}
-            onClick={navTo(contactRef)}
+            onClick={navTo(contactRef, 'contact')}
           >
             Contact
           </a>
 
           <div className="navDivider" aria-hidden="true" />
+
+          <ConnectFab className="button button--primary navConnect" label="Connect With Me" />
 
           <a
             className="navIcon"
@@ -105,18 +106,6 @@ function Navbar({
             <span className="srOnly">Email</span>
           </a>
 
-          <button
-            className="navIcon"
-            type="button"
-            onClick={onToggleTheme}
-            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-          >
-            <i
-              className={theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'}
-              aria-hidden="true"
-            />
-            <span className="srOnly">Toggle theme</span>
-          </button>
         </div>
       </nav>
     </header>
