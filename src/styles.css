@@ -1,14 +1,20 @@
 /* Global theme tokens */
 :root {
-  --bg: #8ac5f4;
-  --panel: rgba(255, 255, 255, 0.2);
-  --panel2: rgba(255, 255, 255, 0.28);
-  --border: rgba(2, 6, 23, 0.16);
-  --text: rgba(2, 6, 23, 0.92);
-  --muted: rgba(2, 6, 23, 0.62);
-  --shadow: 0 22px 55px rgba(2, 6, 23, 0.16);
-  --accent: #111827;
-  --focus: rgba(17, 24, 39, 0.2);
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --primary: #3b82f6;
+  --accent: #22c55e;
+  --highlight: #a78bfa;
+  --border: #334155;
+  --bg: var(--bg-primary);
+  --panel: rgba(30, 41, 59, 0.88);
+  --panel2: rgba(51, 65, 85, 0.94);
+  --text: var(--text-primary);
+  --muted: var(--text-secondary);
+  --shadow: 0 22px 55px rgba(2, 6, 23, 0.45);
+  --focus: rgba(59, 130, 246, 0.28);
   --radius: 18px;
   --max: 1100px;
 }
@@ -60,20 +66,20 @@ button {
 }
 
 .container {
-  width: min(var(--max), calc(100% - 40px));
+  width: min(var(--max), calc(100% - 56px));
   margin: 0 auto;
 }
 
 .section {
-  padding: 72px 0;
+  padding: 92px 0;
 }
 
 .section--hero {
-  padding-top: 120px;
+  padding-top: 140px;
 }
 
 .section--footer {
-  padding-bottom: 90px;
+  padding-bottom: 110px;
 }
 
 .muted {
@@ -87,7 +93,7 @@ button {
 }
 
 .sectionHeader {
-  margin-bottom: 22px;
+  margin-bottom: 32px;
 }
 
 .sectionHeader h2 {
@@ -105,7 +111,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -130,8 +136,8 @@ button {
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: #111827;
-  box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.12);
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18);
 }
 
 .navBurger {
@@ -156,7 +162,7 @@ button {
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .navDivider {
@@ -179,8 +185,8 @@ button {
 }
 
 .navLink.isActive {
-  background: rgba(17, 24, 39, 0.08);
-  border: 1px solid rgba(17, 24, 39, 0.1);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   color: var(--text);
 }
 
@@ -208,7 +214,7 @@ button {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 26px;
+  gap: 44px;
   align-items: center;
 }
 
@@ -223,11 +229,11 @@ button {
   font-size: clamp(34px, 5vw, 56px);
   letter-spacing: -0.03em;
   line-height: 1.05;
-  color: #000;
+  color: var(--text);
 }
 
 .gradientText {
-  color: #000;
+  color: var(--text);
 }
 
 .lead {
@@ -246,8 +252,8 @@ button {
 .heroActions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 14px;
+  margin-top: 28px;
 }
 
 .heroMedia {
@@ -297,17 +303,17 @@ button {
 }
 
 .button--primary {
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(31, 41, 55, 0.95));
+  background: linear-gradient(180deg, var(--primary), #2563eb);
   border-color: transparent;
   color: rgba(255, 255, 255, 0.98);
 }
 
 .button--primary:hover {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(17, 24, 39, 0.98));
+  background: linear-gradient(180deg, #60a5fa, var(--primary));
 }
 
 .button--ghost {
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(30, 41, 59, 0.7);
 }
 
 .buttonIcon {
@@ -317,7 +323,7 @@ button {
 /* Grid + cards */
 .grid {
   display: grid;
-  gap: 14px;
+  gap: 24px;
 }
 
 .grid--3 {
@@ -333,7 +339,7 @@ button {
   background: linear-gradient(180deg, var(--panel), rgba(255, 255, 255, 0.02));
   border: 1px solid var(--border);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
-  padding: 16px;
+  padding: 22px;
   transition: transform 180ms ease, background 180ms ease;
 }
 
@@ -376,7 +382,7 @@ button {
 }
 
 .cardTop {
-  min-height: 120px;
+  min-height: 148px;
 }
 
 .tags {
@@ -390,25 +396,31 @@ button {
   font-size: 12px;
   color: var(--muted);
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(15, 23, 42, 0.55);
   padding: 6px 10px;
   border-radius: 999px;
 }
 
 .cardActions {
-  margin-top: 16px;
+  margin-top: 22px;
 }
 
 /* Footer */
 .footerCard {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 18px;
-  padding: 22px;
+  gap: 28px;
+  padding: 30px;
   border-radius: calc(var(--radius) + 6px);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(30, 41, 59, 0.9);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.button--disabled {
+  opacity: 0.78;
+  cursor: default;
+  pointer-events: none;
 }
 
 .footerCard h2 {
@@ -482,7 +494,7 @@ button {
   width: 100%;
   border-radius: 14px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.75);
   color: var(--text);
   padding: 10px 12px;
   outline: none;
@@ -490,7 +502,7 @@ button {
 }
 
 .input:focus {
-  border-color: rgba(0, 113, 227, 0.55);
+  border-color: var(--primary);
   box-shadow: 0 0 0 4px var(--focus);
 }
 
@@ -513,11 +525,11 @@ button {
 }
 
 .contactStatus.isSuccess {
-  color: rgba(52, 199, 89, 0.95);
+  color: var(--accent);
 }
 
 .contactStatus.isError {
-  color: rgba(255, 59, 48, 0.95);
+  color: #f87171;
 }
 
 .button[disabled] {
@@ -531,7 +543,7 @@ button {
   border-radius: 14px;
   padding: 12px;
   margin-bottom: 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(15, 23, 42, 0.5);
 }
 
 .modalOverlay {
@@ -549,7 +561,7 @@ button {
   width: min(720px, 100%);
   border-radius: 22px;
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.6));
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.96));
   box-shadow: var(--shadow);
   padding: 16px;
 }
@@ -637,7 +649,7 @@ button {
     flex-direction: column;
     align-items: stretch;
     gap: 6px;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(15, 23, 42, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
   }

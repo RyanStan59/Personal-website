@@ -10,12 +10,12 @@ const projects = [
     cta: 'View on GitHub',
   },
   {
-    title: 'Project Two',
+    title: 'Flagship',
     description:
-      'Another project highlight. Keep this to 1–2 lines so the cards stay clean.',
-    tags: ['Java', 'Data Structures'],
-    href: 'https://github.com/RyanStan59',
-    cta: 'View on GitHub',
+      'A SaaS product I am currently building and refining. More details, features, and launch updates are coming as development continues.',
+    tags: ['SaaS', 'Startup', 'In Progress'],
+    href: '',
+    cta: 'Coming Soon',
   },
   {
     title: 'Project Three',
@@ -32,9 +32,7 @@ export default function Projects() {
     <div className="container">
       <div className="sectionHeader">
         <h2>Projects</h2>
-        <p className="muted">
-          A few things I’ve built. (These are easy placeholders to edit.)
-        </p>
+        <p className="muted">A few things I&apos;ve built.</p>
       </div>
 
       <div className="grid grid--3">
@@ -54,17 +52,21 @@ export default function Projects() {
             </div>
 
             <div className="cardActions">
-              <a
-                className="button button--ghost"
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {p.cta}
-                <span className="buttonIcon" aria-hidden="true">
-                  ↗
-                </span>
-              </a>
+              {p.href ? (
+                <a
+                  className="button button--ghost"
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {p.cta}
+                  <span className="buttonIcon" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+              ) : (
+                <span className="button button--ghost button--disabled">{p.cta}</span>
+              )}
             </div>
           </article>
         ))}
@@ -72,4 +74,3 @@ export default function Projects() {
     </div>
   );
 }
-
