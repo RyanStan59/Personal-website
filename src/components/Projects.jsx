@@ -18,6 +18,14 @@ const projects = [
     cta: 'Coming Soon',
   },
   {
+    title: 'Beacon',
+    description:
+      'A client portal SaaS for creative agencies, freelancers, and marketing studios, focused on updates, approvals, file handoff, and active client workspaces.',
+    tags: ['React', 'Vite', 'Supabase'],
+    href: 'https://github.com/RyanStan59/Beacon',
+    cta: 'View on GitHub',
+  },
+  {
     title: 'Project Three',
     description:
       'Add a portfolio-worthy project here (class, hackathon, or personal build).',
