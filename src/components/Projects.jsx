@@ -25,14 +25,6 @@ const projects = [
     href: 'https://github.com/RyanStan59/Beacon',
     cta: 'View on GitHub',
   },
-  {
-    title: 'Project Three',
-    description:
-      'Add a portfolio-worthy project here (class, hackathon, or personal build).',
-    tags: ['Docker', 'Deployment'],
-    href: 'https://github.com/RyanStan59',
-    cta: 'View on GitHub',
-  },
 ];
 
 export default function Projects() {
