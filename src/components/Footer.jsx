@@ -27,7 +27,7 @@ export default function Footer() {
             </a>
             <a
               className="button button--ghost"
-              href={`${process.env.PUBLIC_URL}/images/Ryan_s_Resume (1).pdf`}
+              href={`${process.env.PUBLIC_URL}/images/Ryan_s_Resume (3).pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
