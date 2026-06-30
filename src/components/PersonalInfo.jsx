@@ -2,12 +2,12 @@ function PersonalInfo({ onContactClick }) {
   return (
     <div className="container hero">
       <div className="heroText">
-        <p className="eyebrow">Computer Science • Montclair State University</p>
+        <p className="eyebrow">Computer Science Graduate • Montclair State University</p>
         <h1>
-          Hi, I’m <span className="gradientText">Ryan</span>.
+          Hi, I&apos;m <span className="gradientText">Ryan</span>.
         </h1>
         <p className="lead">
-          I’m a senior CS student currently looking for a summer internship to
+          I&apos;m a Computer Science graduate currently looking for an opportunity to
           grow as a developer and build impactful software.
         </p>
         <p className="muted">
@@ -29,7 +29,7 @@ function PersonalInfo({ onContactClick }) {
           </button>
           <a
             className="button button--ghost"
-            href={`${process.env.PUBLIC_URL}/images/Ryan_s_Resume (3).pdf`}
+            href={`${process.env.PUBLIC_URL}/images/Ryan_s_Resume (5).pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
